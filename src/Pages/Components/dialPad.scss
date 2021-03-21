@@ -1,0 +1,127 @@
+.dialPad {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__showNumber {
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+
+        flex: 2;
+        max-height: (2/12) * 100%;
+        width: 90%;
+        padding-right: 0.5rem;
+        margin-top: 1rem;
+        border-bottom: 1px solid white;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        &__numberPhone {
+            max-width: 100%;
+            & > input {
+                width: 100%;
+                height: 80%;
+                font-size: 1.8rem;
+                font-weight: bold;
+                color: rgb(155, 255, 217);
+                background: none;
+                border: none;
+                outline: none;
+                box-shadow: none;
+                padding: 0 0.5rem;
+                text-align: center;
+                cursor: pointer;
+            }
+        }
+        &__del {
+            position: absolute;
+            right: 0;
+            & > svg {
+                cursor: pointer;
+                transition: all 0.2s ease-in-out 0s;
+                &:hover {
+                    color: rgb(255, 88, 88);
+                }
+            }
+        }
+    }
+    &__keyboard {
+        color: white;
+        font-size: 1.2rem;
+        font-weight: bold;
+
+        flex: 8;
+        max-height: (8/12) * 100%;
+        width: 95%;
+        padding: 0.5rem;
+        margin-top: 2rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &__1,
+        &__2,
+        &__3,
+        &__4,
+        &__5,
+        &__6,
+        &__7,
+        &__8,
+        &__9,
+        &__A,
+        &__Z,
+        &__0 {
+            color: white;
+            width: 30%;
+            padding: 0.5rem;
+            margin: 0.2rem;
+            border-radius: 1.5rem;
+            text-align: center;
+            border: 0.15rem solid white;
+            cursor: pointer;
+            object-fit: contain;
+            transition: all 0.2s ease-in-out 0s;
+            &:hover {
+                background: rgb(255, 255, 255);
+                color: rgb(0, 153, 115);
+                box-shadow: 0 0 0.25rem white;
+                transform: scale(0.95);
+            }
+        }
+    }
+    &__Call {
+        flex: 2;
+        max-height: (2/12) * 100%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__button {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            width: 90%;
+            height: 80%;
+            border-radius: 1.5rem;
+            outline: none;
+            background: rgba(57, 84, 173, 0.699);
+            border: 0.18rem solid rgba(57, 84, 173, 0.473);
+            cursor: pointer;
+            box-shadow: 0 0 0.5rem rgba(57, 84, 173, 0.87);
+            transition: all 0.3s ease-in-out 0s;
+            &:hover {
+                box-shadow: 0 0 1rem rgb(57, 84, 173);
+                transform: scale(0.96);
+            }
+        }
+    }
+}

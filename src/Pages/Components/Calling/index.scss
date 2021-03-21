@@ -1,0 +1,97 @@
+.Calling {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    color: white;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &__title {
+        flex: 4;
+        max-height: (4/12) * 100%;
+        margin-top: 1rem;
+        width: 90%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        &__icon {
+            padding-bottom: 0.5rem;
+            & > svg {
+                font-size: 4rem;
+                color: white;
+            }
+        }
+        &__status {
+            color: rgba(255, 255, 255, 0.685);
+            font-size: 0.9rem;
+        }
+        &__phoneNumber {
+            padding-top: 1rem;
+            font-size: 1.5rem;
+        }
+    }
+    &__option {
+        flex: 6;
+        width: 90%;
+        max-height: 50%;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        &__icon {
+            flex: 6;
+            max-width: 45%;
+            font-size: 3rem;
+            transition: all 0.2s ease-in-out 0s;
+            & > svg {
+                cursor: pointer;
+            }
+        }
+    }
+    &__button {
+        flex: 2;
+        max-height: (2/12) * 100%;
+        width: 90%;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__btn {
+            width: 80%;
+            height: 70%;
+            background: rgb(209, 17, 17);
+            border: 0.18rem solid rgb(179, 14, 14);
+            box-shadow: 0 0 0.5rem rgb(187, 9, 9);
+            border-radius: 1.5rem;
+            transition: all 0.3s ease-in-out 0s;
+            cursor: pointer;
+            outline: none;
+            & > svg {
+                color: white;
+                font-size: 2rem;
+                transform: rotate(225deg);
+                padding-bottom: 0.2rem;
+                padding-right: 0.2rem;
+            }
+            &:hover {
+                box-shadow: 0 0 1rem rgb(36, 4, 4);
+                transform: scale(0.92);
+            }
+        }
+    }
+}

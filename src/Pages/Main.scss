@@ -1,0 +1,15 @@
+.Main {
+    // position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__container {
+        width: 20%;
+        margin: 5rem auto;
+        background: #656ee6d0;
+        height: 30rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 0.5rem #586bd4c0;
+        position: relative;
+    }
+}
