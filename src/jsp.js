@@ -1,4 +1,5 @@
 import * as JsSIP from 'jssip';
+import calllogApi from './Api/calllogApi';
 
 let ua = null;
 let session = null;
@@ -45,9 +46,8 @@ export function Register() {
             console.log("addstream")
         });
 
-        const fromNumber = e.request.from._uri._user;
         const toNumber = e.request.to._uri._user;
-        console.log(fromNumber, toNumber);
+        console.log(toNumber);
     });
 
     ua.on('registered', function (e) { console.log('SIP Registered') });
@@ -92,6 +92,16 @@ export function StartCall(destination, setIsCalling, setCallStatus, setIsMute) {
             setIsCalling(false);
             setCallStatus("");
             setIsMute(false);
+            try {
+                calllogApi.addCalllog({
+                    callto: destination,
+                    starttime: session.start_time,
+                    stoptime: session.end_time
+                });
+                console.log('Call log has been added!');
+            } catch (error) {
+                console.log('Add failed!', error);
+            }
             console.log(session.start_time, session.end_time);
         },
         'confirmed': function (e) {

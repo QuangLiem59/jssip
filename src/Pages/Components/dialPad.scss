@@ -88,6 +88,7 @@
             cursor: pointer;
             object-fit: contain;
             transition: all 0.2s ease-in-out 0s;
+            box-shadow: 0.1rem 0.1rem 0.2rem black;
             &:hover {
                 background: rgb(255, 255, 255);
                 color: rgb(0, 153, 115);
@@ -116,10 +117,10 @@
             background: rgba(57, 84, 173, 0.699);
             border: 0.18rem solid rgba(57, 84, 173, 0.473);
             cursor: pointer;
-            box-shadow: 0 0 0.5rem rgba(57, 84, 173, 0.87);
+            box-shadow: 0.2rem 0.2rem 0.2rem rgb(0, 0, 0);
             transition: all 0.3s ease-in-out 0s;
             &:hover {
-                box-shadow: 0 0 1rem rgb(57, 84, 173);
+                box-shadow: 0 0 0.25rem rgba(57, 84, 173, 0.699);
                 transform: scale(0.96);
             }
         }

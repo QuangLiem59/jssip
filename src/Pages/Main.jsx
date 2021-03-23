@@ -14,7 +14,7 @@ function Main() {
     const [isMute, setIsMute] = useState(false);
     useEffect(() => {
         JSP.Register();
-    });
+    }, []);
     return (
         <div className="Main">
             <div className="Main__container">

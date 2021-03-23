@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './index.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -24,7 +24,7 @@ Calling.defaultProps = {
 }
 
 function Calling(props) {
-    const { setIsCalling, isCalling, phoneNumber, callStatus, isMute, setIsMute } = props;
+    const { isCalling, phoneNumber, callStatus, isMute, setIsMute } = props;
     return (
         <div className="Calling" style={isCalling ? { opacity: "1", zIndex: "1", visibility: "visible" } : { opacity: "0", zIndex: "-1", visibility: "hidden" }}>
             <div className="Calling__title">
